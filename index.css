@@ -1,0 +1,315 @@
+/* style guide */
+
+:root {
+
+    --blue900: #13183F;
+    --blue600: #666CA3;
+    --pink600: #F74780;
+    --pink300: #FFA7C3;
+    --grey: #83869A;
+    --white: #FFFFFF;
+    --whiteGray: #F0F1FF;
+    --grapink: #F02AA6;
+    --graora: #FF6F48;
+    --grapur: #4851FF;
+    /* Linear Gradients */
+
+    --gradientPink: linear-gradient(to bottom, var(--graora) 0%, var(--grapink) 100%);
+    --gradientPurple: linear-gradient(to bottom, var(--grapur) 0%, var(--grapink) 100%);
+    --gradientWhite: linear-gradient(to bottom, var(--white) 0%, var(--whiteGray) 100%);
+
+
+    --filter: brightness(1.7);
+}
+
+@font-face {
+    font-family: jakarta;
+    src: url(./assets/font/PlusJakartaSans-Regular.woff2) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* Globals */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: jakarta;
+
+
+}
+
+h1 {
+    font-size: 5.6rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 800;
+    line-height: 120%;
+}
+
+h5,
+h6,
+p {
+    line-height: 150%;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Utilities */
+.box {
+    overflow: hidden;
+}
+
+.container {
+    margin: 0 3rem;
+
+
+
+}
+
+@media (min-width:768px) {
+    .container {
+        margin: 0 6rem;
+    }
+}
+
+@media (min-width:1050px) {
+    .container {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+}
+
+/*nav*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav h3 {
+    color: var(--blue900);
+}
+
+.nav-button {
+    background-color: var(--blue900);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: var(--white);
+    border-radius: 5rem;
+    width: 19rem;
+    height: 6rem;
+    font-size: 2.3rem;
+    border: 1px solid;
+}
+
+.nav-button:hover {
+    background-color: var(--blue600);
+}
+
+/*Hero*/
+
+@media (min-width:768px) {
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        margin-top: 4rem;
+        margin-bottom: 10rem;
+
+
+
+    }
+}
+
+@media (min-width:1050px) {
+    .hero-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+    }
+
+
+}
+
+.hero-title {
+    color: var(--blue900);
+    padding-bottom: 3rem;
+}
+
+.hero-para {
+    padding-bottom: 3rem;
+    color: var(--grey);
+}
+
+.hero-button {
+    background: var(--gradientPink);
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: var(--white);
+    border-radius: 5rem;
+    width: 19rem;
+    height: 6rem;
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+    border: solid 1px;
+}
+
+.hero-button:hover {
+    filter: brightness(1.7);
+}
+
+/*content*/
+
+@media (min-width:768px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;
+    }
+}
+
+.box {
+    background: var(--gradientWhite);
+    padding-bottom: 4rem;
+}
+
+.content h3 {
+    background: var(--gradientPink);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    color: white;
+    margin: 4rem 0 0 0;
+
+
+}
+
+.card {
+    padding: 4rem;
+    margin-top: 4rem;
+    background-color: white;
+    border-radius: 2rem;
+
+}
+
+.card img {
+    display: flex;
+    margin-top: -6.5rem;
+
+
+}
+
+.card p {
+    color: var(--grey);
+}
+
+.card a {
+    color: var(--pink600);
+    font-weight: 700;
+    line-height: 2.7rem;
+    font-size: 1.8rem;
+
+}
+
+.card a:hover {
+    color: var(--pink300);
+    cursor: pointer;
+}
+
+/*footer*/
+
+.footer {
+    background-color: var(--blue900);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h3 {
+    color: var(--white);
+    margin-left: 6rem;
+
+}
+
+.footer button {
+    background: var(--gradientPurple);
+    color: white;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    border-radius: 5rem;
+    width: 19rem;
+    height: 6rem;
+    font-size: 2.3rem;
+    border: solid 1px var(--gradientPurple);
+    margin-right: 6rem;
+
+}
+
+.footer button:hover {
+    filter: var(--filter);
+}
